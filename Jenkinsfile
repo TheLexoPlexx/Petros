@@ -16,4 +16,5 @@ node {
             app.push(BRANCH_NAME);
             app.push(commitHash);
         }
+        sh 'docker stack deploy --compose-file=/data/docker-stack-compose.yml petros'
 }
