@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import logging
+import os
 from discord.ext import commands
 
 channels = {
@@ -56,7 +57,7 @@ async def setRead(next_channel, yesno):
 
 logging.basicConfig(level=logging.INFO)
 
-TOKEN = 'NDY3NjgyNjU3ODg3ODQ2NDEx.DjDt0Q.Rgu-JuGKynV2oaYfY8oXJLoKIE0'
+TOKEN = os.environ['PETROS_TOKEN']
 description = '''Supreme Commander Petros'''
 bot = commands.Bot(command_prefix='/', description="31LB-Bot")
 server = bot.get_server("467406309755715595")
